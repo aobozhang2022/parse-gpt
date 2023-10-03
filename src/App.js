@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import PdfUploader from "./components/PdfUploader";
+import ChatComponent from "./components/ChatComponent";
+import RenderQA from "./components/RenderQA";
+import { Layout, Typography } from "antd";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [conversation, setConversation] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const { Header, Content } = Layout;
+  const { Title } = Typography;
+
+  const handleResp = (question, answer) => {
+    setConversation([...conversation, { question, answer }]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <Layout style={{ height: "100vh", backgroundColor: "white" }}>
+          <Header
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+          >
+            <Title style={{ color: "white " }}>Next AI</Title>
+          </Header>
+          <Content style={{ width: "80%", margin: "auto" }}>
+            <div className="pdf-uploader">
+              <PdfUploader />
+            </div>
+
+            <br />
+            <br />
+            <div className="render-qa">
+              <RenderQA conversation={conversation} isLoading={isLoading} />
+            </div>
+
+            <br />
+            <br />
+          </Content>
+          <div className="chat-component">
+            <ChatComponent
+                handleResp={handleResp}
+                isLoading={isLoading}
+                setIsLoading={setIsLoading}
+            />
+          </div>
+        </Layout>
+      </>
   );
-}
+};
 
 export default App;

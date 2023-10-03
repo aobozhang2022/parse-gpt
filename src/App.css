@@ -1,38 +1,23 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* chatComponentStyle */
+div.chat-component {
+  position: fixed;
+  bottom: 0;
+  width: 80%;
+  left: 10%; /* this will center it because it leaves 10% space on each side */
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* pdfUploaderStyle */
+div.pdf-uploader {
+  margin: auto;
+  padding-top: 80px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* renderQAStyle */
+div.render-qa {
+  height: 50%; /* adjust the height as you see fit */
+  overflow-y: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
