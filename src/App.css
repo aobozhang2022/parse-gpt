@@ -1,6 +1,3 @@
-/* App.css */
-
-/* chatComponentStyle */
 div.chat-component {
   position: fixed;
   bottom: 0;
@@ -9,13 +6,11 @@ div.chat-component {
   margin-bottom: 20px;
 }
 
-/* pdfUploaderStyle */
 div.pdf-uploader {
   margin: auto;
   padding-top: 80px;
 }
 
-/* renderQAStyle */
 div.render-qa {
   height: 50%; /* adjust the height as you see fit */
   overflow-y: auto;
