@@ -20,7 +20,4 @@ deploy to Amazon Amplify:
 9. click "save and deploy"
 10. wait for some time and deployment URL will be shown on "Domain" section
 
-
-
-
-
+![intro](https://github.com/aobozhang2022/parse-gpt/assets/96475623/5382a20b-0d30-4f67-b41e-e2bbcfd7c986)
